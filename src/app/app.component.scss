@@ -1,0 +1,11 @@
+main {
+    width: 100%;
+    min-height: 100%;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 200px auto;
+}
+
+app-sidebar{
+    background-color: rgb(7, 104, 117)
+}

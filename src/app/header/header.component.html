@@ -1,0 +1,12 @@
+<header>
+    <!-- @defer () { -->
+        <ul>
+            @for(navItem of navigationList; track navItem.id){
+                <li><a [routerLink]="navItem.route">{{navItem.label}}</a></li>
+            }
+        </ul>
+    <!-- } -->
+    <!-- @loading (minimum 4s){
+        <p> Loading ... </p>
+    } -->
+</header>
