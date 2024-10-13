@@ -11,6 +11,7 @@ ul {
     align-items: center;
     height: 50px;
     margin: 0;
+    padding: 1em;
     li {
         list-style: none;
         padding: 2px 5px;
@@ -26,5 +27,9 @@ ul {
     li:hover{
         background-color: #7d203f;
         border-color: #7d203f;
+    }
+    .home-link{
+        margin-left: auto;
+
     }
 }

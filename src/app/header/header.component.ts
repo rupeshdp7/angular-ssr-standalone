@@ -1,13 +1,17 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { faHome } from '@fortawesome/free-solid-svg-icons';
+
 @Component({
   selector: '.header',
   standalone: true,
-  imports: [RouterModule],
+  imports: [RouterModule, FontAwesomeModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
+  faHome = faHome;
   navigationList: NavigationList = [
     { id:"selector", label: "Selector", route: "selector" },
     { id:"style", label: "Style", route: "style" }

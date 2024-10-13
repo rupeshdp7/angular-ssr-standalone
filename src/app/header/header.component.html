@@ -4,6 +4,8 @@
             @for(navItem of navigationList; track navItem.id){
                 <li><a [routerLink]="navItem.route">{{navItem.label}}</a></li>
             }
+            <li class="home-link"><a routerLink=""><fa-icon [icon]="faHome"></fa-icon> Back to Home</a></li>
         </ul>
     </nav>
+    
 </header>
