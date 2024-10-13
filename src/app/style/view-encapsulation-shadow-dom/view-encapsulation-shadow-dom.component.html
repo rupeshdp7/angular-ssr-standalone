@@ -1,0 +1,7 @@
+<p>
+    This mode scopes styles within a component by using the web standard Shadow DOM API. When enabling this mode, Angular attaches a shadow root to the component's host element and renders the component's template and styles into the corresponding shadow tree.
+    
+    This mode strictly guarantees that only that component's styles apply to elements in the component's template. Global styles cannot affect elements in a shadow tree and styles inside the shadow tree cannot affect elements outside of that shadow tree.
+    
+    Enabling ShadowDom encapsulation, however, impacts more than style scoping. Rendering the component in a shadow tree affects event propagation, interaction with the &lt;slot&gt; API, and how browser developer tools show elements. Always understand the full implications of using Shadow DOM in your application before enabling this option.
+</p>

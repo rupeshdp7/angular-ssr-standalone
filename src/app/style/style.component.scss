@@ -1,0 +1,24 @@
+nav{
+    ul{
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+        li{
+            a{
+                color: #fff;
+                text-decoration: none;
+                background-color: #e25615;
+                padding: 5px 10px;
+                border-radius: 5px;
+                
+                &:hover{
+                    background-color: #863448;
+                }
+            }
+        }
+    }
+}
+.style-container{
+    border: 4px solid #fff;
+    min-height: 40vh;
+}

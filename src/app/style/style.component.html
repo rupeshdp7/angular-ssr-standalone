@@ -1,1 +1,12 @@
-<p>style works!</p>
+<nav class="style-nav"><!-- style nav CSS applied from view encapsulation none component-->
+    <ul>
+        @for(navItem of styleComponents; track navItem.path){
+            <li>
+                <a [routerLink]="navItem.path" >{{navItem.title}}</a>
+            </li>
+        }
+    </ul>
+</nav>
+<div class="style-container">
+    <router-outlet></router-outlet>
+</div>
