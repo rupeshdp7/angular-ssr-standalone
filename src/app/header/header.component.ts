@@ -14,7 +14,8 @@ export class HeaderComponent {
   faHome = faHome;
   navigationList: NavigationList = [
     { id:"selector", label: "Selector", route: "selector" },
-    { id:"style", label: "Style", route: "style" }
+    { id: "style", label: "Style", route: "style" },
+    { id: "input", label: "Input", route: "input" },
   ]
 }
 export type Navigation = {

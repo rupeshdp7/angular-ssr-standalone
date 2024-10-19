@@ -4,6 +4,7 @@ import { StyleComponent } from './style/style.component';
 import { ViewEncapsulationEmulatedComponent } from './style/view-encapsulation-emulated/view-encapsulation-emulated.component';
 import { ViewEncapsulationNoneComponent } from './style/view-encapsulation-none/view-encapsulation-none.component';
 import { ViewEncapsulationShadowDomComponent } from './style/view-encapsulation-shadow-dom/view-encapsulation-shadow-dom.component';
+import { InputComponent } from './input/input.component';
 
 export const routes: Routes = [
     { path: 'selector', component: SelectorComponent, title: 'Selector'},
@@ -14,4 +15,5 @@ export const routes: Routes = [
             { path: 'shadow-dom', component: ViewEncapsulationShadowDomComponent, title: "Style - Shadow DOM" },
         ]
     },
+    {path: 'input', component: InputComponent, title: 'Input'}
 ];
