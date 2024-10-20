@@ -16,6 +16,7 @@ export class HeaderComponent {
     { id:"selector", label: "Selector", route: "selector" },
     { id: "style", label: "Style", route: "style" },
     { id: "input", label: "Input", route: "input" },
+    { id: "output", label: "Output", route: "output" },
   ]
 }
 export type Navigation = {
