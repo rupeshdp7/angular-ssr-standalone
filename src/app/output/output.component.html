@@ -1,1 +1,6 @@
-<p>output works!</p>
+Counter {{counter}}
+
+<app-button [color]="'#d73069'" [text]="'red'" (updateCounter)="updateCounter()"></app-button>
+<app-button [color]="'#3089d7'" [text]="'blue'" (updateCounter)="updateCounter()"></app-button>
+<app-button [color]="'#249f23'" [text]="'green'" (updateCounter)="updateCounter()"></app-button>
+

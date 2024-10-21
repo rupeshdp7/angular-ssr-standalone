@@ -1,0 +1,9 @@
+.btn-component{
+    padding: 5px 15px;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    &:hover{
+        transform: scale(1.1);
+    }
+}
