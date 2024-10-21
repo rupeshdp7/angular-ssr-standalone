@@ -17,6 +17,7 @@ export class HeaderComponent {
     { id: "style", label: "Style", route: "style" },
     { id: "input", label: "Input", route: "input" },
     { id: "output", label: "Output", route: "output" },
+    { id: "content-projection", label: "Content Projection", route: "content-projection" },
   ]
 }
 export type Navigation = {

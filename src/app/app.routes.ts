@@ -6,6 +6,7 @@ import { ViewEncapsulationNoneComponent } from './style/view-encapsulation-none/
 import { ViewEncapsulationShadowDomComponent } from './style/view-encapsulation-shadow-dom/view-encapsulation-shadow-dom.component';
 import { InputComponent } from './input/input.component';
 import { OutputComponent } from './output/output.component';
+import { ContentProjectionComponent } from './output/content-projection/content-projection.component';
 
 export const routes: Routes = [
     { path: 'selector', component: SelectorComponent, title: 'Angular - Selector'},
@@ -19,4 +20,5 @@ export const routes: Routes = [
     },
     { path: 'input', component: InputComponent, title: 'Angular - Input' },
     { path: 'output', component: OutputComponent, title: 'Angular - Output' },
+    { path: 'content-projection', component: ContentProjectionComponent, title: 'Angular - Content Projection' },
 ];
