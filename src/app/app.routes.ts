@@ -6,7 +6,7 @@ import { ViewEncapsulationNoneComponent } from './style/view-encapsulation-none/
 import { ViewEncapsulationShadowDomComponent } from './style/view-encapsulation-shadow-dom/view-encapsulation-shadow-dom.component';
 import { InputComponent } from './input/input.component';
 import { OutputComponent } from './output/output.component';
-import { ContentProjectionComponent } from './output/content-projection/content-projection.component';
+import { ContentProjectionComponent } from './content-projection/content-projection.component';
 
 export const routes: Routes = [
     { path: 'selector', component: SelectorComponent, title: 'Angular - Selector'},
