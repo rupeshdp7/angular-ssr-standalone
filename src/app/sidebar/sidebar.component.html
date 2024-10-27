@@ -1,1 +1,10 @@
-<p>sidebar works!</p>
+<header>
+    <nav>
+        <ul>
+            @for(navItem of navigationList; track navItem.id){
+            <li [routerLink]="navItem.route"><a>{{navItem.label}}</a></li>
+            }
+        </ul>
+    </nav>
+
+</header>

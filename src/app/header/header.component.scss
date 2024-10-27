@@ -1,9 +1,10 @@
-header{
-    position:sticky;
+header {
+    position: sticky;
     top: 0;
     left: 0;
     z-index: 1;
 }
+
 ul {
     display: flex;
     gap: 10px;
@@ -12,23 +13,27 @@ ul {
     height: 50px;
     margin: 0;
     padding: 1em;
+
     li {
         list-style: none;
         padding: 2px 5px;
         border: 2px solid #c2285b;
         border-radius: 5px;
         height: 30px;
-        background-color:#c2285b;
+        background-color: #c2285b;
+
         a {
-            color:#FFFFFF;
+            color: #FFFFFF;
             text-decoration: none;
         }
     }
-    li:hover{
+
+    li:hover {
         background-color: #7d203f;
         border-color: #7d203f;
     }
-    .home-link{
+
+    .home-link {
         margin-left: auto;
 
     }

@@ -1,0 +1,22 @@
+ul{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 5px;
+    li{
+        padding: 5px;
+        background-color: rgb(237, 14, 118);
+        border: 2px solid #c6d9db;
+        border-radius: 5px;
+        margin:5px 0;
+        cursor: pointer;
+        &:hover{
+            background-color: rgb(186, 10, 79);
+        }
+        a{
+            color: #f4f5f6;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+    }
+}

@@ -1,7 +1,10 @@
-import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Component, OnDestroy } from '@angular/core';
+import { ActivatedRoute, RouterEvent, RouterModule } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faHome } from '@fortawesome/free-solid-svg-icons';
+import { NavigationService } from '../navigation.service';
+import { Subject, takeUntil } from 'rxjs';
+import { HeaderNavigation, HeaderNavigationList, NavigationList } from '../models/common.types';
 
 @Component({
   selector: '.header',
@@ -10,21 +13,35 @@ import { faHome } from '@fortawesome/free-solid-svg-icons';
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnDestroy{
   faHome = faHome;
-  navigationList: NavigationList = [
-    { id:"selector", label: "Selector", route: "selector" },
-    { id: "style", label: "Style", route: "style" },
-    { id: "input", label: "Input", route: "input" },
-    { id: "output", label: "Output", route: "output" },
-    { id: "content-projection", label: "Content Projection", route: "content-projection" },
-  ]
-}
-export type Navigation = {
-  id:string;
-  label: string;
-  route: string;
-  icon?: string;
-};
+  activeRoute: string= '';
+  $destroy = new Subject<boolean>();
+  headerNavigationList: HeaderNavigationList = [];
+  constructor(private navigationService: NavigationService, private router: ActivatedRoute){
+    
 
-export type NavigationList = Navigation[];
+    this.navigationService.headerNavigationList
+    .pipe(takeUntil(this.$destroy))
+      .subscribe((navigationList: HeaderNavigationList) => {
+      this.headerNavigationList = navigationList;
+      // this.setCurrentRoute(this.headerNavigationList[0].subMenu);
+      
+    });
+    this.router.url.subscribe((url) => {
+
+      console.log(url)
+    })
+    
+  }
+  ngOnDestroy(): void {
+    this.$destroy.next(true);
+    this.$destroy.complete();
+  }
+  setCurrentRoute(route:NavigationList){
+    console.log(route);
+    this.navigationService.navigationListSubject.next(route);
+  }
+  
+  
+}
