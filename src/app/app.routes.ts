@@ -32,6 +32,13 @@ import { DirectivesComponent } from './directives/directives.component';
 import { AttributeDirectivesComponent } from './directives/attribute-directives/attribute-directives.component';
 import { StructuralDirectivesComponent } from './directives/structural-directives/structural-directives.component';
 import { DirectiveCompositionComponent } from './directives/directive-composition/directive-composition.component';
+import { DependencyInjectionComponent } from './dependency-injection/dependency-injection.component';
+import { BasicDependencyInjectionComponent } from './dependency-injection/basic-dependency-injection/basic-dependency-injection.component';
+import { InjectableServiceComponent } from './dependency-injection/injectable-service/injectable-service.component';
+import { DependencyProvidersComponent } from './dependency-injection/dependency-providers/dependency-providers.component';
+import { InjectionContextComponent } from './dependency-injection/injection-context/injection-context.component';
+import { HierarchicalInjectorsComponent } from './dependency-injection/hierarchical-injectors/hierarchical-injectors.component';
+import { DependencyInjectionInActionComponent } from './dependency-injection/dependency-injection-in-action/dependency-injection-in-action.component';
 
 export const routes: Routes = [
     {
@@ -85,6 +92,17 @@ export const routes: Routes = [
             { path: 'structural-directive', component: StructuralDirectivesComponent, title: 'Angular - Structural Directive'},
             { path: 'directive-composition', component: DirectiveCompositionComponent, title: 'Angular - Directive Composition' },
 
+        ]
+    },
+    {
+        path: 'dependency-injection', component: DependencyInjectionComponent, title: 'Angular - Dependency Injection', 
+        children:[
+            { path: 'basic-dependency-injection', component: BasicDependencyInjectionComponent, title: 'Angular - Basic Dependency Injection' },
+            { path: 'injectable-service', component: InjectableServiceComponent, title: 'Angular - Injectable Service' },
+            { path: 'dependency-providers', component: DependencyProvidersComponent, title: 'Angular - Dependency Providers'},
+            { path: 'injection-context', component: InjectionContextComponent, title: 'Angular - Injection Context' },
+            { path: 'hierarchical-injectors', component: HierarchicalInjectorsComponent, title: 'Angular - Hierarchical Injectors' },
+            { path: 'dependency-injection-in-action', component: DependencyInjectionInActionComponent, title: 'Angular - Dependency Injection In Action' },
         ]
     },
     { path: '', redirectTo: 'components', pathMatch: 'full' }
