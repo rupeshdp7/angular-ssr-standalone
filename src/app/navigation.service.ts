@@ -47,7 +47,24 @@ export class NavigationService {
           { id: "expression-syntax", label: "Expression Syntax", route: "templates/expression-syntax" },
           { id: "whitespace", label: "Whitespace", route: "templates/whitespace" },
         ]
-    }
+    },
+    {
+      id: "directives", label: "Directives", route: "directives", subMenu: [
+        { id: "attribute-directive", label: "Attribute Directive", route: "directives/attribute-directive" },
+        { id: "structural-directive", label: "Structural Directive", route: "directives/structural-directive" },
+        { id: "directive-composition", label: "Directive Composition", route: "directives/directive-composition" },
+      ]
+    },
+    {
+      id: "dependency-injection", label: "Dependency Injection", route: "dependency-injection", subMenu: [
+        { id: "basic-dependency-injection", label: "Basic Dependency Injection", route: "dependency-injection/basic-dependency-injection" },
+        { id: "injectable-service", label: "Injectable Service", route: "dependency-injection/injectable-service" },
+        { id: "dependency-providers", label: "Dependency Providers", route: "dependency-injection/dependency-providers" },
+        { id: "injection-context", label: "Injection Context", route: "dependency-injection/injection-context" },
+        { id: "hierarchical-injectors", label: "Hierarchical Injectors", route: "dependency-injection/hierarchical-injectors" },
+        { id: "dependency-injection-in-action", label: "Dependency Injection In Action", route: "dependency-injection/dependency-injection-in-action" },
+      ]
+    },
   ]
 
 

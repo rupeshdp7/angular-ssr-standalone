@@ -28,6 +28,10 @@ import { GroupingComponent } from './templates/grouping/grouping.component';
 import { TemplateVariablesComponent } from './templates/template-variables/template-variables.component';
 import { DeferredLoadingComponent } from './templates/deferred-loading/deferred-loading.component';
 import { WhitespaceComponent } from './templates/whitespace/whitespace.component';
+import { DirectivesComponent } from './directives/directives.component';
+import { AttributeDirectivesComponent } from './directives/attribute-directives/attribute-directives.component';
+import { StructuralDirectivesComponent } from './directives/structural-directives/structural-directives.component';
+import { DirectiveCompositionComponent } from './directives/directive-composition/directive-composition.component';
 
 export const routes: Routes = [
     {
@@ -71,6 +75,15 @@ export const routes: Routes = [
             { path: 'deferred-loading', component: DeferredLoadingComponent, title: 'Angular - Deferred Loading' },
             { path: 'expression-syntax', component: LifecycleComponent, title: 'Angular - Expression Syntax' },
             { path: 'whitespace', component: WhitespaceComponent, title: 'Angular - Whitespace' },
+
+        ]
+    },
+    {
+        path: 'directives', component: DirectivesComponent, title: 'Angular - Directives',
+        children:[
+            { path: 'attribute-directive', component: AttributeDirectivesComponent, title: 'Angular - Attribute Directive' },
+            { path: 'structural-directive', component: StructuralDirectivesComponent, title: 'Angular - Structural Directive'},
+            { path: 'directive-composition', component: DirectiveCompositionComponent, title: 'Angular - Directive Composition' },
 
         ]
     },
