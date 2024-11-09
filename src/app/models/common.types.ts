@@ -15,3 +15,8 @@ export type HeaderNavigation = {
 export type NavigationList = Navigation[];
 
 export type HeaderNavigationList = HeaderNavigation[];
+
+export type CurrentNavigationURLSegments = {
+    parent: string;
+    child: string;
+}; 

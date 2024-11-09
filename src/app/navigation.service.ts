@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable, of, ReplaySubject, Subject } from 'rxjs';
-import { Navigation, NavigationList, HeaderNavigation, HeaderNavigationList } from './models/common.types';
+import { BehaviorSubject, Observable, of, ReplaySubject } from 'rxjs';
+import { Navigation, NavigationList, HeaderNavigation, HeaderNavigationList, CurrentNavigationURLSegments } from './models/common.types';
 
 @Injectable({
   providedIn: 'root'
@@ -9,6 +9,7 @@ export class NavigationService {
 
   navigationSubject = new BehaviorSubject<Navigation | null>(null);
   navigationListSubject = new ReplaySubject<NavigationList>();
+  currentNavigation = new BehaviorSubject<CurrentNavigationURLSegments | null>(null);
 
   _headerNavigationList: HeaderNavigationList = [
     {
@@ -70,6 +71,19 @@ export class NavigationService {
 
   get headerNavigationList(): Observable<HeaderNavigationList> {
     return of(this._headerNavigationList);
+  }
+
+  setCurrentNavigation(url: string) {
+    const urlSegments: string [] = url.split("/");
+    const navigationSegments:CurrentNavigationURLSegments = {
+      parent: urlSegments[1] ?? "",
+      child: urlSegments[2] ?? "",
+    }
+    this.currentNavigation.next(navigationSegments);
+    const currentMenu = this._headerNavigationList.find(menu=>
+      menu.route == navigationSegments.parent
+    )?.subMenu ?? [];
+    this.navigationListSubject.next(currentMenu)
   }
 
   constructor() { }

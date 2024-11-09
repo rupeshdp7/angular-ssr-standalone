@@ -2,7 +2,9 @@
     <nav>
         <ul>
             @for(navItem of navigationList; track navItem.id){
-            <li [routerLink]="navItem.route"><a>{{navItem.label}}</a></li>
+            <li [routerLink]="navItem.route" [ngClass]="{'active':currentSection==navItem.id}">
+                <a>{{navItem.label}}</a>
+            </li>
             }
         </ul>
     </nav>

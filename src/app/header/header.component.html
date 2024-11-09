@@ -2,7 +2,9 @@
     <nav>
         <ul>
             @for(navItem of headerNavigationList; track navItem.id){
-                <li (click)="setCurrentRoute(navItem.subMenu)"><a [routerLink]="navItem.route">{{navItem.label}}</a></li>
+                <li [ngClass]="{'active':currentParent==navItem.route}">
+                    <a [routerLink]="navItem.route">{{navItem.label}}</a>
+                </li>
             }
             <li class="home-link"><a routerLink=""><fa-icon [icon]="faHome"></fa-icon> Back to Home</a></li>
         </ul>

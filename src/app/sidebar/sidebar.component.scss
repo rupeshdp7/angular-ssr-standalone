@@ -5,12 +5,13 @@ ul{
     padding: 5px;
     li{
         padding: 5px;
-        /* background-color: rgb(237, 14, 118);
-        border: 2px solid #c6d9db; */
         border-radius: 5px;
         margin:5px 0;
         cursor: pointer;
         &:hover{
+            background-color: rgb(186, 10, 79);
+        }
+        &.active{
             background-color: rgb(186, 10, 79);
         }
         a{
