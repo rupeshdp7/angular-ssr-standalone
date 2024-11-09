@@ -16,12 +16,9 @@ ul {
 
     li {
         list-style: none;
-        padding: 2px 5px;
-        border: 2px solid #c2285b;
-        border-radius: 5px;
+        padding: 5px 10px;
+        border-radius: 15px;
         height: 30px;
-        background-color: #c2285b;
-
         a {
             color: #FFFFFF;
             text-decoration: none;
@@ -29,8 +26,7 @@ ul {
     }
 
     li:hover {
-        background-color: #7d203f;
-        border-color: #7d203f;
+        background-color: #4e687e;
     }
 
     .home-link {
