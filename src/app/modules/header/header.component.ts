@@ -2,9 +2,9 @@ import { Component, OnDestroy } from '@angular/core';
 import { ActivatedRoute, RouterEvent, RouterModule } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faHome } from '@fortawesome/free-solid-svg-icons';
-import { NavigationService } from '../navigation.service';
+import { NavigationService } from '../../navigation.service';
 import { Subject, takeUntil } from 'rxjs';
-import { CurrentNavigationURLSegments, HeaderNavigation, HeaderNavigationList, NavigationList } from '../models/common.types';
+import { CurrentNavigationURLSegments, HeaderNavigation, HeaderNavigationList, NavigationList } from '../../models/common.types';
 import { NgClass } from '@angular/common';
 
 @Component({

@@ -1,7 +1,7 @@
 import { Component, OnDestroy } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { NavigationService } from '../navigation.service';
-import { CurrentNavigationURLSegments, Navigation, NavigationList } from '../models/common.types';
+import { NavigationService } from '../../navigation.service';
+import { CurrentNavigationURLSegments, Navigation, NavigationList } from '../../models/common.types';
 import { Subject, takeUntil } from 'rxjs';
 import { NgClass } from '@angular/common';
 
