@@ -1,3 +1,44 @@
-Angular creates an instance of a component for every HTML element that matches the component's selector. The DOM element
-that matches a component's selector is that component's host element. The contents of a component's template are
-rendered inside its host element.
+<div class="container">
+    <div class="row">
+        <p>
+            Angular creates an instance of a component for every HTML element that matches the component's selector. The DOM element
+            that matches a component's selector is that component's host element. The contents of a component's template are
+            rendered inside its host element.
+        </p>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <app-profile-photo></app-profile-photo>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="row title">
+                Component Source Code
+            </div>
+            <div class="row">
+                <pre>
+<code>
+    // Component source
+    &#64;Component(&#123;
+    selector: 'profile-photo',
+    template: `&lt;img src="profile-photo.jpg"
+    alt="Your profile photo" /&gt;`,
+    &#125;)
+    export class ProfilePhoto &#123;&#125;
+</code>
+                </pre>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="row title">
+                Use of Component
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="row title">
+                Rendering of Component
+            </div>
+        </div>
+    </div>
+</div>
